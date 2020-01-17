@@ -1,12 +1,12 @@
 # Write classes for the following class hierarchy:
 #
-#  [Vehicle]->[FlightVehicle]->[Starship] ALL PARENT CLASSES OR SUPER CLASSES
+#  [Vehicle]->[FlightVehicle]->[Starship] 
 #      |                |
 #      v                v
-# [GroundVehicle]      [Airplane] CHILDREN/SUB CLASSES OF VEHICLES/STARSHIPS
+# [GroundVehicle]      [Airplane] 
 #   |       |
 #   v       v
-# [Car]  [Motorcycle] CHILD/SUBCLASSES OF GROUND VEHICLE ONLY
+# [Car]  [Motorcycle] 
 #
 # Each class can simply "pass" for its body. The exercise is about setting up
 # the hierarchy.
@@ -38,7 +38,7 @@ class Motorcycle(GroundVehicle):
 ################################
 
 # FlightVehicle and its subclass BEGIN
-class FlightVehicle:
+class FlightVehicle(Vehicle):
     '''Parent Class to Airplane class only.'''
     pass
 
@@ -50,7 +50,7 @@ class Airplane(FlightVehicle):
 ################################
 
 # Starship is a stand alone class. NO subclasses 
-class Starship:
+class Starship(FlightVehicle):
     '''Parent Class to nothing.'''
     pass
 
